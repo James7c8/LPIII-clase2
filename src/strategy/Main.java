@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
-    private static final int OPCION_SALIR = 5;
+    private static final int OPCION_SALIR = 99;
 
 
     public static void main(String[] args) {
@@ -16,7 +16,15 @@ public class Main {
 
         int opcion;
         do {
-            System.out.println("Ingrese una opción \n(1) - Crear\n(2) - Leer\n(3) - Actualizar\n(4) - Eliminar\n(" + OPCION_SALIR + ") - SALIR");
+            System.out.println(
+                    "Ingrese una opción \n" +
+                    "(1) - Crear\n" +
+                    "(2) - Leer\n" +
+                    "(3) - Actualizar\n" +
+                    "(4) - Eliminar\n" +
+                    "(5) - Buscar\n(" +
+                     + OPCION_SALIR + ") - SALIR"
+                    );
             opcion = scanner.nextInt();
             scanner.nextLine();
             Accion accion = strategy.get(opcion);
